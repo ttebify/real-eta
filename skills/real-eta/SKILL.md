@@ -10,7 +10,7 @@ Language models learned durations from human-written tickets, blog posts and roa
 - **Models overestimate how long agent work takes.** In one 2026 study, models' estimates before a task overshot the actual duration by 4–7×, and by 5–10× in multi-step agent tasks. Models know how long things take humans, but they cannot sense their own speed.
 - **But agents do not shrink everything.** Firm-level data shows coding gets faster while review, rework and coordination absorb much of the gain. External waits (payment approval, app store review, users finding the product) do not speed up at all.
 
-So neither "human estimate" nor "human estimate ÷ 10" is right. Build the estimate bottom-up from agent-sized units, price the human and calendar parts separately, and justify every number with a measured comparison. The evidence and its sources are in `references/evidence.md`. Measured builds to compare against are in `references/reference-classes.md`. Read both before giving a timeline for anything larger than a single task.
+So neither "human estimate" nor "human estimate ÷ 10" is right. Build the estimate bottom-up from agent-sized units, price the human and calendar parts separately and justify every number with a measured comparison. The evidence and its sources are in `references/evidence.md`. Measured builds to compare against are in `references/reference-classes.md`. Read both before giving a timeline for anything larger than a single task.
 
 ## When to give a number
 
@@ -34,7 +34,7 @@ Establish these from the conversation or the codebase. Ask only for what you can
 
 ### 2. Break the work into agent-sized units
 
-Size each unit at what a skilled engineer would do in about 1–2 hours. As of early 2026, frontier agents succeed about 80% of the time at that size (METR), so units this big finish reliably without a human rescue. Tag each unit:
+Size each unit at what a skilled engineer would do in about 1–2 hours. That is close to the 1.5 hours at which METR measured frontier agents succeeding about 80% of the time in early 2026, so units this big usually finish without a human rescue. Tag each unit:
 
 - **build**: code, configuration, tests, migrations, docs (agent-heavy)
 - **research**: reading docs, exploring a codebase, comparing options (agent-heavy, can run in parallel)
@@ -87,7 +87,7 @@ Comparing estimates with actual results is the only lasting fix. Forecasting fro
 
 ## Output: short by default
 
-The unit breakdown in steps 2–4 is your working, not the answer. The reader wants the date, what sets it, and what to do today. A 1,500-word plan with a 20-row table buries all three. Aim for **under 300 words**, and well under for small questions.
+The unit breakdown in steps 2–4 is your working, not the answer. The reader wants the date, what sets it and what to do today. A 1,500-word plan with a 20-row table buries all three. Aim for **under 300 words**, and well under for small questions.
 
 For a quick question, give one to three sentences that still separate the clocks:
 

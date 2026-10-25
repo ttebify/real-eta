@@ -102,7 +102,7 @@ The skill shortened the timeline where the build was the slow part (the booking 
 
 ## What makes it different
 
-Most estimation prompts either suppress time estimates or apply a fixed speed-up multiplier written by hand. This skill compares against measured builds and published studies, rates the strength of each source, separates the time agents save from the time they cannot save, gives a short dated plan instead of a single number, and warns when its own evidence is getting old.
+Most estimation prompts either suppress time estimates or apply a fixed speed-up multiplier written by hand. This skill compares against measured builds and published studies, rates the strength of each source, separates the time agents save from the time they cannot save, gives a short dated plan instead of a single number and warns when its own evidence is getting old.
 
 ## Evidence
 
