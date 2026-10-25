@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: solo-greenfield-booking-mvp
+expected_outcome: |
+  A compressed, agent-paced timeline (MVP code in days) that keeps Paystack and WhatsApp/Meta approvals and getting shops onboard as separate calendar items, with phases and cited reasoning.

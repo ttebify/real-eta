@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: mobile-subscription-app-stores
+expected_outcome: |
+  Agent build in days, but the date set by store accounts, agreements, review and Google Play testing requirements; a concrete earliest date range.

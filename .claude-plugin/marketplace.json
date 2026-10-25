@@ -1,0 +1,23 @@
+{
+  "name": "real-eta",
+  "owner": {
+    "name": "Justice Ekemezie"
+  },
+  "metadata": {
+    "description": "Realistic, evidence-backed timelines for software built with AI coding agents.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "real-eta",
+      "source": "./",
+      "description": "Realistic, evidence-backed timelines for software built with AI coding agents: agent time, human time and calendar time, with sources for every number.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Justice Ekemezie"
+      },
+      "keywords": ["estimation", "timeline", "planning", "roadmap", "agents"],
+      "category": "workflow"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "real-eta",
+  "description": "Realistic, evidence-backed timelines for software built with AI coding agents: agent time, human time and calendar time, with sources for every number.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Justice Ekemezie"
+  },
+  "homepage": "https://github.com/ttebify/real-eta",
+  "repository": "https://github.com/ttebify/real-eta",
+  "license": "MIT",
+  "keywords": ["estimation", "timeline", "planning", "roadmap", "agents"],
+  "skills": ["./skills/real-eta"]
+}
