@@ -17,9 +17,9 @@ The research behind every number is in `references/evidence.md`. Measured agent 
 
 ## How to estimate
 
-1. **Scope.** Find what ships first: the smallest version a real person can use or pay for. Note whether the code is new or an existing codebase, who is working, and whether tests exist to check the work against. Ask only for what you cannot work out.
+1. **Scope.** Find what ships first: the smallest version a real person can use or pay for. Note whether the code is new or an existing codebase, who is working, which model and tool will do the work, and whether tests exist to check the work against. Ask only for what you cannot work out.
 
-2. **Split the work into units** of about 1–2 hours of skilled human work each. Agents finish units this size reliably. Mark each one:
+2. **Split the work into units** of about 1–2 hours of skilled human work each. Current frontier models finish units this size reliably. Older, smaller or cheaper models do not: use units of 15–30 minutes for them, and more review. If you don't know the model, assume a frontier one and say so. Mark each unit:
    - **build**: code, config, tests, docs
    - **research**: reading docs or a codebase, comparing options
    - **human**: review, decisions, accounts, keys, device testing, content

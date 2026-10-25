@@ -22,8 +22,10 @@ Compiled 2026-10-25. Each source was opened when this file was written. Strength
 | Time horizon (task length in human time that agents finish) | public frontier 50% ≈ 12 h (range 5–61 h), 80% ≈ 1.5 h, Feb–Mar 2026; suite near saturation | METR, [Frontier Risk Report](https://metr.org/blog/2026-05-19-frontier-risk-report/), May 2026 | strong, but uncertain at the top |
 | Horizon doubling time | ~131 days since 2023, ~89 days since 2024 | METR Time Horizon 1.1 post, Jan 2026; [time-horizons page](https://metr.org/time-horizons/) (no longer updated after Sept 2026) | strong |
 | Real-world performance is weaker than benchmarks | about half of passing SWE-bench Verified solutions would fail real code review (late 2025) | METR Frontier Risk Report | strong |
+| The 80% horizon depends heavily on the model | Claude 3.7 Sonnet (Feb 2025) ≈ 12 min; o3 (Apr 2025) ≈ 29 min; GPT-5.3 Codex ≈ 54 min, Claude Opus 4.6 ≈ 69 min, Gemini 3.1 Pro ≈ 89 min (all Feb 2026); Claude Mythos Preview, early (Apr 2026) ≈ 185 min. Small and cheap models are not measured | METR, [Time Horizon 1.1 data](https://metr.org/assets/benchmark_results_1_1.yaml), read 25 October 2026 | strong for the models listed |
+| Same task, different model and tool, very different wall-clock time | on ProgramBench, Opus 4.8 in Claude Code averaged 85 min and GPT-5.5 in Codex 17.5 min, with similar pass rates (65.1% and 60.5%); the authors put most of the gap down to the tool and effort setting | Ofengenden and Andriushchenko, [Your Agents Are Not Time Aware](https://www.lesswrong.com/posts/eAbuPXbjakop5rSJx/your-agents-are-not-time-aware), 14 August 2026 | moderate (one benchmark, research blog) |
 
-Use: size units at the 80% horizon (about 1–2 human-hours) so they finish reliably.
+Use: size units at the 80% horizon of the model actually doing the work. For a current frontier model that is about 1–2 human-hours. For an older, smaller or cheaper model, use smaller units (15–30 min of human work) and expect more review. Model choice changes the agent clock only; it does not change review or calendar waits.
 
 ## 3. Productivity and where the time goes
 

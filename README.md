@@ -33,7 +33,7 @@ unzip real-eta.zip -d ~/.agents/skills
 
 ## Use
 
-Ask a timing question as you normally would, such as "How long until this is live?" or "Is this doable by Friday?".
+Ask a timing question as you normally would, such as "How long until this is live?" or "Is this doable by Friday?". Say which model will do the work if it is not a current frontier model, because smaller models get smaller tasks and more review time.
 
 To make it learn from your own projects, log what actually happened (times in minutes):
 
