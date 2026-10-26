@@ -41,12 +41,18 @@ To calibrate it against your own projects, log what actually happened (times in 
 python3 ~/.agents/skills/real-eta/scripts/calibrate.py log --kind build --est 30 --actual 22
 ```
 
-That path matches the zip install above. If you installed the Claude Code plugin, use the `scripts/calibrate.py` file inside its skill directory. The skill reads the log before each estimate.
+That path matches the zip install above. For the Claude Code plugin, the script is at `~/.claude/plugins/marketplaces/real-eta/skills/real-eta/scripts/calibrate.py`. The skill reads the log before each estimate.
+
+## Token cost
+
+- About 170 tokens in every session, for the skill's name and description.
+- About 5,000 more when it fires: about 1,800 for the skill and about 3,200 for the two reference files it reads. These are estimates from `claude plugin details` and file sizes.
+- A full plan took 5 to 8 turns and cost $0.26 to $0.44 per answer on Claude Opus 5.5, measured over nine test runs on 26 October 2026. That includes Claude Code's own overhead. Those runs used an earlier 750-word cap, so shorter answers should cost a little less.
 
 ## Limitations
 
 - The tests favour it. In one run per case on 26 October 2026, it passed 20 of 20 checks against 9 of 20 without it.
-- The answer cap is 650 words. In that run, the skill's answers were shorter than the no-skill answers in all three cases.
+- Answers are capped at 300 words. With a 750-word cap, test answers ran 536 to 639 words, so the cap sets the length, not the content.
 - Some checks test facts the skill does not supply, so treat the score as a smoke test, not proof. The test cases are in [`evals`](evals).
 - No estimate has been checked against a finished project yet. The ranges are judgment calls, fitted to a handful of published builds.
 - Answers vary between runs, especially on the largest test case.

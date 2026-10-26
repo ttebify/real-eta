@@ -40,11 +40,11 @@ The research behind every number is in `references/evidence.md`. Measured agent 
    - Team work in an existing codebase gains much less from agents. Coding is only 30–40% of engineering time; the rest is review, coordination and waiting, which agents do not speed up. Expect modest gains there and tell the user why.
    - If `references/evidence.md` is more than six months old, the agent ranges are probably too long. Say so and suggest refreshing them.
 
-6. **Calibrate.** Before estimating, run `python3 <skill-dir>/scripts/calibrate.py stats`. If there is history, scale each kind of unit by its median ratio and say so. After building part of the work, log it in minutes: `python3 <skill-dir>/scripts/calibrate.py log --kind build --est 30 --actual 22`.
+6. **Calibrate.** Before estimating, run `python3 <skill-dir>/scripts/calibrate.py stats`. If there is history, scale each kind of unit by its median ratio and say so. After building part of the work, log it in minutes: `python3 <skill-dir>/scripts/calibrate.py log --kind build --est 30 --actual 22`. If you cannot run the script, say so in one clause under **Why these numbers**, not before the date.
 
 ## Answer
 
-Keep the answer under 650 words and aim for 300. This is a hard limit: count before sending. The units are your working, not the answer. If you are over, cut the unit detail first; keep the date, what sets it and what to start today.
+Keep the answer under 300 words. The units are your working, not the answer. If you are over, cut the unit detail first; keep the date, what sets it and what to start today.
 
 For a small question, one or two sentences:
 
