@@ -1,6 +1,6 @@
 # Reference classes: measured agent builds
 
-Compare a new estimate against the closest row (the outside view). These are best-documented public cases as of 2026-10-25; most are single cases, so treat them as anchors, not laws. Prefer the user's own calibration log (`scripts/calibrate.py stats`) when it has data.
+Compare a new estimate against the closest row. That is the outside view. These are the best-documented public cases as of 25 October 2026. Most are single cases, so treat them as anchors, not laws. When your own calibration log has data, prefer it (`scripts/calibrate.py stats`).
 
 | Build | What was built | Agent wall-clock | Human time | Conditions | Source |
 |---|---|---|---|---|---|
@@ -12,9 +12,11 @@ Compare a new estimate against the closest row (the outside view). These are bes
 | Hundreds of agents | Browser from scratch, >1M lines | ~1 week | Not reported; "still needs careful review" | Experimental, quality unmeasured | Cursor, [Scaling agents](https://cursor.com/blog/scaling-agents), Jan 2026 |
 | Firm-level adoption | Normal team work | n/a | Review time +49%, shipped output ≤ +12% | 718 firms | Chen & Stratton, Aug 2026 |
 
+The firm-level row is an adoption study, not a single build.
+
 ## Reading the table
 
 - **Solo greenfield MVP with clear tests:** closest to the Willison row. Code is hours to a few days. The date is set by human review, accounts and external waits.
 - **Feature in an existing product:** closest to the Hashimoto row. Expect days of calendar time and hours of human attention per feature, even with agents.
-- **Team, production quality:** closest to the Sora and firm-level rows. Agents raise output, but review caps the end-to-end gain. Weeks, not days.
+- **Team, production quality:** closest to the Sora and firm-level rows. Agents raise output, but review caps the end-to-end gain, so expect weeks.
 - **Large scope with a strong oracle:** the C compiler row shows weeks for very large systems. Without the oracle, expect much worse.

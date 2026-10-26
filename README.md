@@ -1,16 +1,16 @@
 # real-eta
 
-Ask an AI assistant how long a project will take and it usually answers at human-team pace, because it learned time from human tickets and roadmaps. Divide that by ten and you are wrong the other way: agents write code faster, but review, approvals and customers do not speed up.
+Ask an AI assistant how long a project will take and it often answers at human-team pace. It learned durations from human tickets and roadmaps. It has no stopwatch. Divide that answer by ten and you are wrong the other way: agents write code faster, but review, approvals and customers do not speed up.
 
-real-eta is a skill that fixes both. It splits every estimate into three clocks (agent time, your time and calendar time), checks each number against measured builds and published studies, and answers with a short dated plan.
+real-eta replaces both guesses. It tracks agent time, your time and calendar time as three separate clocks, compares each range with measured builds and published studies, and labels the judgment calls. The answer is a dated plan short enough to use.
 
 ## Example
 
 A solo developer asked how long until a barbershop booking app with Paystack deposits and WhatsApp alerts is live. The answer opened with:
 
-> **First real deposit taken by Fri 6 Nov 2026 (P90 Fri 20 Nov).** About 15–30 h of agent work and 25–40 h of your own time. The build fits in one week. The dates depend on Paystack going live and on how fast you can sign shops, not on the code.
+> **First real deposit taken by Fri 6 Nov 2026 (P90 Fri 20 Nov).** About 15–30 h of agent work and 25–40 h of your own time. The code fits in one week. The dates depend on Paystack going live and on how fast you can sign shops, not on the code.
 
-It then listed the phases, what to start today, what could slip and the source for each number.
+The full answer gives the phases, what to start today, what could slip and a source or judgment label for each number.
 
 ## Install
 
@@ -33,23 +33,25 @@ unzip real-eta.zip -d ~/.agents/skills
 
 ## Use
 
-Ask a timing question as you normally would, such as "How long until this is live?" or "Is this doable by Friday?". Say which model will do the work if it is not a current frontier model, because smaller models get smaller tasks and more review time.
+Ask a timing question as you normally would. For example: "How long until this is live?" or "Is this doable by Friday?" Say which model will do the work if it is not a current frontier model, because smaller models get smaller tasks and more review time.
 
-To make it learn from your own projects, log what actually happened (times in minutes):
+To calibrate it against your own projects, log what actually happened (times in minutes):
 
 ```bash
 python3 ~/.agents/skills/real-eta/scripts/calibrate.py log --kind build --est 30 --actual 22
 ```
 
-The skill reads this log before each estimate.
+That path matches the zip install above. If you installed the Claude Code plugin, use the `scripts/calibrate.py` file inside its skill directory. The skill reads the log before each estimate.
 
 ## Limitations
 
-- **The tests favour it.** On three test requests it passed 20 of 20 checks against 9 of 20 without it, but the checks were written around what it teaches. The test cases are in [`evals`](evals).
-- **No estimate has been checked against a finished project yet.** The time ranges per task are judgment, fitted to a handful of published builds.
-- **Answers vary between runs**, by up to about two weeks on the largest test case.
-- **The evidence ages fast.** It is dated 25 October 2026 and should be refreshed by April 2027.
-- **Tested only with Claude.** The instructions are model-neutral, but other models have not been measured.
+- The tests favour it. In one run per case on 26 October 2026, it passed 20 of 20 checks against 9 of 20 without it.
+- The answer cap is 650 words. In that run, the skill's answers were shorter than the no-skill answers in all three cases.
+- Some checks test facts the skill does not supply, so treat the score as a smoke test, not proof. The test cases are in [`evals`](evals).
+- No estimate has been checked against a finished project yet. The ranges are judgment calls, fitted to a handful of published builds.
+- Answers vary between runs, especially on the largest test case.
+- The evidence ages fast. It is dated 25 October 2026; refresh it by April 2027.
+- Tested only with Claude. The instructions are model-neutral, but other models have not been measured.
 
 The research behind every number, with a strength rating for each source, is in [`references/evidence.md`](skills/real-eta/references/evidence.md).
 

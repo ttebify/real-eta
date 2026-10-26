@@ -1,4 +1,4 @@
 schema_version: "1.1"
 name: team-brownfield-okta-sso
 expected_outcome: |
-  A timeline that does NOT over-compress: brownfield, security-critical, customer IdP coordination; human review and testing dominate; weeks of calendar time with reasoning.
+  A timeline that does not over-compress brownfield SSO work. The work is security-critical and depends on customer IdP coordination. Human review and testing dominate, so expect weeks of calendar time with reasoning.
